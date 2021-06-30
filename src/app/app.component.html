@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <h1 class="title">tic tac toe</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="score-board">
+        <div class=score-board__scores>
+          <span>
+            <fa-icon [icon]="facircle" class="icon-circle"></fa-icon> {{circleScore | addZero}}
+          </span> 
+          <span>
+            <fa-icon [icon]="fatimes" class="icon-cross"></fa-icon> {{crossScore | addZero}}
+          </span>
+        </div>
+        <div class="score-board__action">
+          <button class="btn btn-info" (click)="restartGame()">restart</button> 
+          <button class="btn btn-warning"(click)="restartMatch()">rematch</button>
+        </div>
+        <div>
+          <p class="score-board__message">{{message}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-board (onWinning)="updateScore($event)" (restartGame)="reset($event)"></app-board>
+    </div>
+  </div>
+</div>

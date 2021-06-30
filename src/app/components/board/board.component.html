@@ -1,0 +1,12 @@
+<div class="board">
+    <div class="board__container">
+        <div 
+            class="col-4 tile"
+            *ngFor="let tile of tiles;let i=index" 
+            (click)="move(i)">
+                <div class="tile__container">
+                    <fa-icon [icon]="icon(i)" [ngClass]="tile" class="tile__icon"></fa-icon>
+                </div>
+        </div>
+    </div>
+</div>

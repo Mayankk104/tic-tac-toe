@@ -1,0 +1,73 @@
+@import "../../../scss/global";
+
+.board{
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    
+    &__container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        & > .tile:nth-child(1) > .tile__container{
+            border-top-left-radius: 10px;
+        }
+        & > .tile:nth-child(3) > .tile__container{
+            border-top-right-radius: 10px;
+        }
+        & > .tile:nth-child(7) > .tile__container{
+            border-bottom-left-radius: 10px;
+        }
+        & > .tile:nth-child(9) > .tile__container{
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+.tile{
+    margin-top: -6px;
+    display: inline-block;
+    height: 33.33%;
+    position: relative;
+    padding: 5px;
+    
+    &__container{
+        height: 100%;
+        border: 1px solid white;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    &__icon{
+        color: darken(white,10%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(3);
+        animation: fade .5s;
+    }
+}
+
+.crossed{
+    color: $primary-yellow;
+}
+
+.circle{
+    color: $primary-blue;
+}
+
+.untouched{
+    animation: none;
+    opacity: 0;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
