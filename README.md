@@ -4,7 +4,7 @@ This project was generated with Angular CLI version 11.2.4.
 
 ## Link
 
-to chcek go to : [Link](https://stoic-easley-23e64c.netlify.app)
+to chcek go to: [Link](https://stoic-easley-23e64c.netlify.app)
 
 ## GetStarted
 
