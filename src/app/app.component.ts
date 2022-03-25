@@ -7,34 +7,33 @@ import { faCircle } from '@fortawesome/free-regular-svg-icons';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent{
+export class AppComponent {
   title = 'tic-tac-toev2';
   message = '';
   facircle = faCircle;
-  fatimes  = faTimes;
+  fatimes = faTimes;
 
   crossScore = 0;
   circleScore = 0;
 
 
-  updateScore(winner: string){
-    if (winner === 'crossed') {
+  updateScore(winner: string) {
+    if (winner === 'cross')
       this.crossScore++;
-    }
-    else {
+    else
       this.circleScore++;
-    }
   }
 
-  restartMatch(){ }
+  restartMatch() { }
 
-  restartGame(){
+  restartGame() {
     this.restartMatch();
     this.crossScore = 0;
     this.circleScore = 0;
   }
 
-  reset(fu: any){
+  reset(fu: any) {
+    console.log(fu);
     this.restartMatch = fu;
   }
 }
