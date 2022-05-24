@@ -1,10 +1,10 @@
-# [TicTacToe](https://stoic-easley-23e64c.netlify.app)
+# [TicTacToe](https://tic-tac-toe-mayank.netlify.app/)
 This project was generated with Angular CLI version 11.2.4.
 
 
 ## Link
 
-to chcek go to: [Link](https://stoic-easley-23e64c.netlify.app)
+to chcek go to: [Link](https://tic-tac-toe-mayank.netlify.app/)
 
 ## GetStarted
 
